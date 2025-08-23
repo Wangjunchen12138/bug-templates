@@ -6,8 +6,7 @@
   },
   "options": {
     "fw_triplet": [
-      "A076BXXU0AYG1/A076BOLM0AYG1/A076BXXU0AYG1",
-      "A076BXXU0AYH2/A076BOLM0AYH2/A076BXXU0AYH2"
+      "A076BXXU0AYH4/A076BOLM0AYH4/A076BXXU0AYH4"
     ],
     "version_path_en": [
       "\\\\rdfs\\\\glda\\\\M196\\\\KSG_M196_A01\\\\三星临时版本\\\\用户版本\\\\0703_0701code(8th) SEP\\\\user",
@@ -45,4 +44,5 @@
     "frequency": "9/10",
     "remark": "Sticker Version: 18.0.2.011503; see log+video around 14:37"
   }
+
 }
