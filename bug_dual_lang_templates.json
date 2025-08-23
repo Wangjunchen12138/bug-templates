@@ -1,0 +1,48 @@
+{
+  "meta": {
+    "name": "Bug Dual Lang Local Demo",
+    "version": "1.0.0",
+    "updated_at": "2025-08-24"
+  },
+  "options": {
+    "fw_triplet": [
+      "A076BXXU0AYG1/A076BOLM0AYG1/A076BXXU0AYG1",
+      "A076BXXU0AYH2/A076BOLM0AYH2/A076BXXU0AYH2"
+    ],
+    "version_path_en": [
+      "\\\\rdfs\\\\glda\\\\M196\\\\KSG_M196_A01\\\\三星临时版本\\\\用户版本\\\\0703_0701code(8th) SEP\\\\user",
+      "\\\\rdfs\\\\glda\\\\M196\\\\KSG_M196_A01\\\\正式版本\\\\0801_release"
+    ],
+    "market_prefix": "[XME][SM-A076B_SEA_XME][DS]",
+    "market_suffix": "[B OS]"
+  },
+  "templates": [
+    {
+      "id": "bug_dual_lang",
+      "label": "双语缺陷报告模板",
+      "content": "{{ project_tags|join('') }} {{ title_en }}\n\n{{ market_build_line }}\n[Preparation] /\n[Operating System Version] {{ os_version_en|default('Android 16, One UI 8.0') }}\n[Version Path] {{ version_path_en }}\n[Test Step]\n{% for s in steps_en %}{{ loop.index }}. {{ s }}\n{% endfor -%}\n[Expect Output] {{ expect_en }}\n[Test Results] {{ actual_en }}\n[Frequency] {{ frequency }}\n[Remarks] {{ remark|default('') }}\n\n{{ market_build_line }}\n[预置条件]/\n[操作系统版本] {{ os_version_zh|default('Android 16，One UI 8.0') }}\n[版本路径] {{ version_path_en }}\n[复现路径]\n{% for s in steps_zh %}{{ loop.index }}. {{ s }}\n{% endfor -%}\n[预期结果] {{ expect_zh }}\n[实际结果] {{ actual_zh }}\n[概率] {{ frequency }}\n[备注] {{ remark|default('') }}"
+    }
+  ],
+  "demo_data": {
+    "title_en": "Enter Deco Pic, open the seal. When the phone is in landscape mode, the direction of the seal does not rotate along with the landscape mode.",
+    "title_zh": "进入Deco Pic，打开印章，手机横屏后印章方向未随横屏旋转（10/10）",
+    "steps_en": [
+      "Enter Deco Pic",
+      "Open the seal",
+      "Landscape mode on the mobile phone",
+      "Check the status of the seal"
+    ],
+    "steps_zh": [
+      "进入Deco Pic",
+      "打开印章",
+      "手机横屏",
+      "查看印章状态"
+    ],
+    "expect_en": "The seal rotates in landscape mode on the mobile phone",
+    "expect_zh": "印章随手机横屏旋转",
+    "actual_en": "The seal does not rotate when the phone is in landscape mode.",
+    "actual_zh": "印章未随手机横屏旋转",
+    "frequency": "9/10",
+    "remark": "Sticker Version: 18.0.2.011503; see log+video around 14:37"
+  }
+}
