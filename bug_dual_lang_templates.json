@@ -15,6 +15,11 @@
     "market_prefix": "[XME][SM-A076B_SEA_XME][DS]",
     "market_suffix": "[B OS]"
   },
+    "defaults": {
+      "project_tags": ["[A07 5G SM_A076B]", "[EVT1]", "[A01_1st]", "[Camera]", "[Function]"],
+      "os_version_en": "Android 16, One UI 8.0",
+      "os_version_zh": "Android 16，One UI 8.0"
+  },
   "templates": [
     {
       "id": "bug_dual_lang",
@@ -46,3 +51,4 @@
   }
 
 }
+
